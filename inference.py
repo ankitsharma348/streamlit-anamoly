@@ -4,6 +4,8 @@ import numpy as np
 import pickle
 from datetime import datetime
 import time
+import pytz
+ist = pytz.timezone('Asia/Kolkata')
 
 # Load the trained model
 model_filename = "time_to_failure_model.pkl"
@@ -25,7 +27,7 @@ def generate_synthetic_data():
     """
     Generates synthetic sensor data (temperature, pressure) and predicts time to failure.
     """
-    current_time = datetime.now()
+    current_time = datetime.now(ist)
     temperature = np.random.uniform(50, 200)  # Simulated temperature sensor
     pressure = np.random.uniform(1, 10)      # Simulated pressure sensor
     features = pd.DataFrame([[temperature, pressure]], columns=["temperature", "pressure"])
