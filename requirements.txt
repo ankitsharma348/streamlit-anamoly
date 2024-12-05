@@ -1,4 +1,4 @@
-streamlit==1.20.0
-pandas==2.0.1
-numpy==1.24.2
-scikit-learn==1.2.2  # Add this if you're using machine learning models (for pickle)
+streamlit
+pandas
+numpy
+scikit-learn
